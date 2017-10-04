@@ -10,7 +10,11 @@
     <body>
         <div>
             <form id="myform" action="" method="post">
-                <input type="text" name="nombre" required="true" br>
+                <input type="text" name="nombre" required="true" placeholder="Su nombre"><br>
+                <input type="tel" name="telefono" required="true" placeholder="Su teléfono"><br>
+                <input type="email" name="correo" required="true" placeholder="Su correo"><br>
+                <input type="password" name="contrasenia" required="true" placeholder="Contraseña"><br>
+                <input type="checkbox" id="cheq" value="Acepto que me roben todo">Aceptar términos<br>
                 <button id="boton" onclick="serializar()" >Click</button>
             </form>
 
@@ -19,9 +23,30 @@
                 {
                     
                         var text = "";
-                        text = $('#myform').serializeJSON();
-                        console.log(text);
-                        alert(text.nombre);                    
+                        
+                        
+
+                        if($('#cheq').is(':checked')) {
+
+                            text = $('#myform').serializeJSON();
+                            if (text.nombre == "" || text.telefono == "" || text.correo == "" || text.contrasenia == "" ) 
+                            {
+                                alert("Por favor, llene los campos obligatorios");
+                        
+                            }
+                            else
+                            {
+                                console.log(text);
+                                alert(text.nombre+"\n"+text.telefono+"\n"+text.correo+"\n"+text.contrasenia+"\n");   
+                                
+                            }
+
+                        } else {
+                            alert("Por favor, acepte los términos");
+                        }
+
+                        
+                   
                 }
             </script>
         </div>
