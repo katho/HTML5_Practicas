@@ -290,3 +290,22 @@ function misAlerts()
     //Enviar la alerta
     alert("Hola... "+cadena);
 }
+
+//Variable global objeto
+var persona = {
+    nombre : "Juan", 
+    edad : 25,
+    colorDeOjos : "verde"
+}
+
+function manejarObjeto()
+{
+    console.log(Object.keys(persona));
+    var dinamico = "colorDeOjos";
+    var dinamico2 = "RH";
+    console.log(persona);
+    console.log(persona.nombre);
+    console.log(persona["nombre"]);
+    console.log(persona[dinamico]);
+    console.error(persona[dinamico2]);
+}
