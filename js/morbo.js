@@ -15,14 +15,32 @@ function romper()
 
 function destruir()
 {
-    var literal = .1E-13;
+   /*var literal = .1E-13;
 
     Persona = {nombre : "Arnulfo", edad: 101};
+    Persona.apellido = "Velez";
+    */
 
-    console.log(Persona);
+    var x = true;
 
-    alert(Persona);
+    var y = false;
+
+
+    console.log("x && y "+(x && y));
+    console.log("y && y "+(y && y));
+    console.log("x || y "+x || y);
+    console.log("!x "+!x);
+    console.log("!y "+!y);
+
+    //alert(Persona);
+    /*var persona = new Object();
+    persona.nombre = "Javier";
+    persona.eda = 28;
+    
+    console.log(persona);*/
 }
+
+
 
 function romper2 ()
 {
